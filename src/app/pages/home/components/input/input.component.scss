@@ -1,6 +1,4 @@
 form{
-  max-width: 27rem;
-  width: 100%;
   display: flex;
   gap: 0.6875rem;
   align-items: center;
@@ -28,7 +26,7 @@ form{
 
   button{
     background-color: var(--color-background-button-primary);
-    padding:0.5625rem 0.5625rem 0.4375rem 0.5625rem;
+    padding: 0.5625rem 0.5625rem 0.4375rem 0.5625rem;
     border-radius: 0.625rem;
   }
 }

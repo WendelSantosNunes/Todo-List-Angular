@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { tasks } from 'src/app/core/utils/tasks';
+import { task } from 'src/app/shared/models/task';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  tasksUtils: task[] = tasks.filter((resultado) => resultado.activo === true);
+  tasksUtilsDone: task[] = tasks.filter((resultado) => resultado.activo === false);
+  task!: task;
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

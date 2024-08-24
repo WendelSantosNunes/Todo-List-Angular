@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { task } from 'src/app/shared/models/task';
 
 @Component({
   selector: 'app-input',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputComponent implements OnInit {
 
+  @Output() taskTextChange = new EventEmitter<task>()
+  taskText: string = ''
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  newTask(){
+    this.taskTextChange.emit({text: this.taskText, activo: true});
   }
 
 }
