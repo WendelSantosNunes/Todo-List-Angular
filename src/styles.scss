@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+	--color-text-primary: #FFFFFF;
+	--color-text-secondary: #FF944D;
+
+  --color-background-primary: #1E1E1E;
+  --color-background-secondary: #EBEBED;
+
+  --color-background-button-primary: #9E78CF;
+}
+
+body{
+  background-color: var(--color-background-primary);
+  min-height: 100vh;
+  color: var(--color-text-primary);
+
+  &.dark{
+    --color-text-primary: #000000;
+    --color-text-secondary: #FF944D;
+    --color-text-tertiary: #FFFFFF;
+
+    --color-background-primary: #FFFFFF;
+    --color-background-secondary: #423F3E;
+    --color-background-tertiary: #313131;
+
+    --color-background-button-primary: #9E78CF;
+    --color-background-button-tertiary: #454545;
+
+    background-color: var(--color-background-primary);
+    color: var(--color-text-primary);
+  }
+}
+
+*{
+  margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+	appearance: none;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+p, a, button, h1, h2, h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+}
+
+.container {
+  width: min(90vw, 86rem);
+  margin: 0 auto;
+}

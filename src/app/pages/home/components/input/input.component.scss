@@ -1,0 +1,34 @@
+form{
+  max-width: 27rem;
+  width: 100%;
+  display: flex;
+  gap: 0.6875rem;
+  align-items: center;
+
+  input{
+    max-width: 23.8125rem;
+    width: 100%;
+    color: var(--color-text-primary);
+
+    padding: 0.6875rem 0 0.6875rem 1rem;
+
+    background-color: transparent;
+    border: 1px solid #3E1671;
+    border-radius: 0.625rem;
+
+    &:focus{
+      border-color: var(--color-background-button-primary);
+    }
+
+    &::placeholder{
+      color: var(--color-text-primary);
+      opacity: 50%;
+    }
+  }
+
+  button{
+    background-color: var(--color-background-button-primary);
+    padding:0.5625rem 0.5625rem 0.4375rem 0.5625rem;
+    border-radius: 0.625rem;
+  }
+}
