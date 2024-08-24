@@ -2,8 +2,10 @@
   <input
     type="text"
     placeholder="Adicione uma nova tarefa"
+    name="input"
+    [(ngModel)]="taskText"
   >
-  <button>
+  <button (click)="newTask()">
     <img src="/assets/Plus.svg" alt="Image Plus">
   </button>
 </form>

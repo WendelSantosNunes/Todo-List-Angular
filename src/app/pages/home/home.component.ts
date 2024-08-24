@@ -17,4 +17,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  onTaskTextChange(taskText: task){
+    this.tasksUtils.push(taskText);
+  }
 }
