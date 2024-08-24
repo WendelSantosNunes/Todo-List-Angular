@@ -9,7 +9,7 @@
     <div *ngFor="let task of tasksUtils; let index = index" class="card">
       <p>{{task.text}}</p>
       <div class="action">
-        <img src="assets/Check.svg" alt="">
+        <img src="assets/Check.svg" alt="" (click)="onTaskCompletedChange(index)">
         <img src="assets/TrashSimple.svg" alt="">
       </div>
     </div>

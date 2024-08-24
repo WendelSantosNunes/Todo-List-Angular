@@ -21,4 +21,9 @@ export class HomeComponent implements OnInit {
   onTaskTextChange(taskText: task){
     this.tasksUtils.push(taskText);
   }
+
+  onTaskCompletedChange(taskCompleted: number){
+    this.task = this.tasksUtils.splice(taskCompleted,1)[0]
+    this.tasksUtilsDone.push(this.task)
+  }
 }
