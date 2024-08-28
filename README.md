@@ -1,27 +1,73 @@
-# TodoList
+<h1 align="center"> 
+    To-do List
+</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
+<p align="center">
+ <a href="#-sobre-o-projeto">Sobre</a> •
+ <a href="#-funcionalidades">Funcionalidades</a> •
+ <a href="#-Configuração-do-ambiente">Configuração do ambiente</a> • 
+ <a href="#-como-executar">Como executar</a> • 
+ <a href="#-tecnologias">Tecnologias</a> 
+</p>
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### 🪐 Sobre o projeto
 
-## Code scaffolding
+Este projeto tem como objetivo fixar os conteúdos vistos no curso ‘RxJS e Angular: Programando de Forma Reativa’ da plataforma de cursos Alura.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<div align="center">
+  <img src="./Imagem-readme/Project.png">
+</div>
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 🎨 Configuração do ambiente
 
-## Running unit tests
+```bash
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Instalar o node na versão a partir da 14.20.x 
 
-## Running end-to-end tests
+## Para instalar o Node.js em sua versão mais recente, siga os passos no site oficial:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+https://nodejs.org/pt
 
-## Further help
+# Após a instalação do Node, abra o terminal ou o Prompt de Comando e execute o seguinte comando para instalar o Angular CLI na versão utilizada no curso:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+npm install -g @angular/cli@14.2.4
+
+# Para instalar o Visual Studio Code (VSCode), visite o site oficial e baixe a versão compatível com o seu ambiente de desenvolvimento. Siga as instruções fornecidas para instalar o VSCode em seu sistema:
+
+https://code.visualstudio.com/download
+```
+
+### 🚀 Como executar
+
+#### Pré-requisitos
+
+Certifique-se de que todas as configurações do ambiente foram realizadas corretamente.
+
+#### Execução
+
+- Faça o download do projeto para o seu computador.
+
+- Abra o Visual Studio Code (VSCode):
+
+- No menu principal, selecione a opção “File” e depois escolha “Open Folder”.
+
+- Navegue até a pasta onde o projeto foi baixado e clique em “Selecionar”.
+
+- No projeto aberto, acesse o terminal integrado do VSCode.
+
+- Execute o seguinte comando no terminal: `ng serve`
+
+- O projeto estará disponível em: `http://localhost:4200/`
+
+### 🛠 Tecnologias
+
+#### **Front-End**
+
+- **[JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)**
+- **[HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)**
+- **[CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)**
+- **[Angular](https://angular.dev)**

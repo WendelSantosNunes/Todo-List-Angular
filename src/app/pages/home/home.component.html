@@ -6,7 +6,7 @@
   <div class="task">
     <h2>Tasks to do - {{tasksUtils? tasksUtils.length: 0}}</h2>
 
-    <p *ngIf="!tasksUtils || tasksUtils.length == 0">Não existem tarefa cadastrada!</p>
+    <p *ngIf="!tasksUtils || tasksUtils.length == 0">There are no tasks registered!</p>
 
     <div *ngFor="let task of tasksUtils; let index = index" class="card">
       <p>{{task.text}}</p>
@@ -20,7 +20,7 @@
   <div class="task">
     <h2>Done - {{tasksUtilsDone ? tasksUtilsDone.length: 0}}</h2>
 
-    <p *ngIf="!tasksUtilsDone || tasksUtilsDone.length == 0">Não existem tarefa concluídas!</p>
+    <p *ngIf="!tasksUtilsDone || tasksUtilsDone.length == 0">There are no completed tasks!</p>
 
     <div *ngFor="let task of tasksUtilsDone" class="card">
       <p class="completed">{{task.text}}</p>
