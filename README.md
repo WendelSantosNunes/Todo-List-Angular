@@ -17,7 +17,7 @@
 Este projeto tem como objetivo fixar os conteúdos vistos no curso ‘RxJS e Angular: Programando de Forma Reativa’ da plataforma de cursos Alura.
 
 <div align="center">
-  <img src="./Imagem-readme/Project.png">
+  <img src="./image-readme/project.png">
 </div>
 
 ---
