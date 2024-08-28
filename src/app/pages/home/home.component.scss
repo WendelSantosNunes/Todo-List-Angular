@@ -15,6 +15,10 @@ section{
     width: 100%;
     margin-top: 3.75rem;
 
+    > p {
+      margin-top: 1rem;
+    }
+
     .card{
       margin-top: 1rem;
       display: flex;
@@ -25,6 +29,11 @@ section{
       color: var(--color-text-secondary);
       padding: 1.375rem;
       border-radius: 0.625rem;
+
+      .completed{
+        color: var(--color-text-tertiary);
+        text-decoration: line-through;
+      }
 
       div{
         display: flex;

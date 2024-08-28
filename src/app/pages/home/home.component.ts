@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { tasks } from 'src/app/core/utils/tasks';
+import { LocalStorageService } from 'src/app/core/services/local-storage.service';
 import { task } from 'src/app/shared/models/task';
 
 @Component({
@@ -8,22 +8,49 @@ import { task } from 'src/app/shared/models/task';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  allTasks: task[] = [];
+  tasksUtils: task[] = [];
+  tasksUtilsDone: task[] = [];
 
-  tasksUtils: task[] = tasks.filter((resultado) => resultado.activo === true);
-  tasksUtilsDone: task[] = tasks.filter((resultado) => resultado.activo === false);
-  task!: task;
-
-  constructor() { }
+  constructor(
+    private localStorageService: LocalStorageService
+  ) { }
 
   ngOnInit(): void {
+    this.task();
+  }
+
+  task(){
+    const storedTasks = this.localStorageService.getItem("task");
+    this.allTasks = storedTasks ? storedTasks : [];
+    if(this.allTasks  != null){
+      this.tasksUtils = this.allTasks.filter((resultado) => resultado.activo === true);
+      this.tasksUtilsDone = this.allTasks .filter((resultado) => resultado.activo === false)
+    }
+
+    console.log(this.allTasks)
   }
 
   onTaskTextChange(taskText: task){
-    this.tasksUtils.push(taskText);
+    this.allTasks.push(taskText);
+    this.localStorageService.setItem('task', this.allTasks);
+    this.task();
   }
 
-  onTaskCompletedChange(taskCompleted: number){
-    this.task = this.tasksUtils.splice(taskCompleted,1)[0]
-    this.tasksUtilsDone.push(this.task)
+  onTaskCompletedChange(taskCompleted: string){
+    this.allTasks = this.allTasks.map((resultado)=>{
+      if(resultado.text === taskCompleted){
+        resultado.activo = false
+      }
+      return resultado;
+    })
+    // this.allTasks[taskCompleted].activo = false;
+    this.localStorageService.setItem('task', this.allTasks);
+    this.task();
+  }
+
+  onTaskDeleteChange(taskCompleted: number){
+    this.allTasks.splice(taskCompleted,1)[0];
+    this.task();
   }
 }

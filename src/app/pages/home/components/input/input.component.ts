@@ -19,5 +19,4 @@ export class InputComponent implements OnInit {
   newTask(){
     this.taskTextChange.emit({text: this.taskText, activo: true});
   }
-
 }

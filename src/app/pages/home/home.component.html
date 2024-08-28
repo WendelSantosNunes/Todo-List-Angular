@@ -4,26 +4,26 @@
   </div>
 
   <div class="task">
-    <h2>Tasks to do - {{tasksUtils.length}}</h2>
+    <h2>Tasks to do - {{tasksUtils? tasksUtils.length: 0}}</h2>
+
+    <p *ngIf="!tasksUtils || tasksUtils.length == 0">Não existem tarefa cadastrada!</p>
 
     <div *ngFor="let task of tasksUtils; let index = index" class="card">
       <p>{{task.text}}</p>
       <div class="action">
-        <img src="assets/Check.svg" alt="" (click)="onTaskCompletedChange(index)">
-        <img src="assets/TrashSimple.svg" alt="">
+        <img src="assets/Check.svg" alt="" (click)="onTaskCompletedChange(task.text)">
+        <img src="assets/TrashSimple.svg" alt="" (click)="onTaskDeleteChange(index)">
       </div>
     </div>
   </div>
 
   <div class="task">
-    <h2>Done - {{tasksUtilsDone.length}}</h2>
+    <h2>Done - {{tasksUtilsDone ? tasksUtilsDone.length: 0}}</h2>
+
+    <p *ngIf="!tasksUtilsDone || tasksUtilsDone.length == 0">Não existem tarefa concluídas!</p>
 
     <div *ngFor="let task of tasksUtilsDone" class="card">
-      <p>{{task.text}}</p>
-      <div class="action">
-        <img src="assets/Check.svg" alt="">
-        <img src="assets/TrashSimple.svg" alt="">
-      </div>
+      <p class="completed">{{task.text}}</p>
     </div>
   </div>
 
